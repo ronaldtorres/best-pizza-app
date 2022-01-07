@@ -1,30 +1,27 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="main flex">
+    <div class="left-container hidden lg:block">
+      <div class="container flex justify-center h-screen items-center">
+        <img src="./assets/pizza.png" alt="background" />
+      </div>
+    </div>
+    <div class="flex-grow">
+      <router-view />
+    </div>
   </div>
-  <router-view />
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @apply w-full h-screen;
 
-#nav {
-  padding: 30px;
+  .main > div {
+    @apply h-screen;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .left-container {
+    background-image: url("./assets/bg.png");
+    @apply w-5/12 bg-cover bg-no-repeat;
   }
 }
 </style>
