@@ -36,11 +36,15 @@ http://localhost:8080/
 
 - Por motivos de simplicidad para este ejercicio usé localStorage para simular la sesión guardada del usuario.
 
+- Escogí un modal para presentar los detalles de las tiendas para simplificar la interacción y dado también que la tienda no tiene demasiada información.
+
 ### Otras notas
 
 - Tiempo apoximado de ejecución del proyecto 22.5 horas.
 
 - Traté de fidelizarme lo más posible al diseño sin tener medidas exactas de los elementos. Teniendo en cuenta cosas como: el login que no está centrado y otros detalles.
+
+- Testeado en los navegadores Google Chrome, Firefox Developer Edition y Brave.
 
 
 ## Pendiente por añadir (Punto personal)
