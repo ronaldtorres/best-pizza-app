@@ -1,6 +1,6 @@
 <template>
   <div class="mx-8 lg:mx-16 text-center h-screen flex items-center">
-    <div class="w-full xl:w-8/12 xl:ml-16">
+    <div class="w-full xl:w-8/12 2xl:w-6/12 xl:ml-16">
       <img
         class="mx-auto mb-10 w-6/12"
         alt="Best Pizza Logo"

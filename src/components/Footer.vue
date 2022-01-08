@@ -19,7 +19,9 @@
       </a>
     </div>
     <div>
-      <img src="@/assets/logo-mono.png" width="80" alt="Best Pizzas Logo" />
+      <router-link to="/">
+        <img src="@/assets/logo-mono.png" width="80" alt="Best Pizzas Logo" />
+      </router-link>
     </div>
   </footer>
 </template>

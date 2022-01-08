@@ -32,7 +32,7 @@
           >
             Productos
           </h3>
-          <div class="grid lg:grid-cols-2 gap-2">
+          <div class="grid md:grid-cols-2 gap-2">
             <ProductCard v-for="p in store.products" :key="p.id" :product="p" />
           </div>
         </div>
@@ -87,15 +87,4 @@ export default {
   width: 101.5%;
   height: 101.5%;
 }
-
-// /* Hide scrollbar for Chrome, Safari and Opera */
-// .no-scrollbar::-webkit-scrollbar {
-//   display: none;
-// }
-
-// /* Hide scrollbar for IE, Edge and Firefox */
-// .no-scrollbar {
-//   -ms-overflow-style: none; /* IE and Edge */
-//   scrollbar-width: none; /* Firefox */
-// }
 </style>

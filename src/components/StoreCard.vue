@@ -2,7 +2,9 @@
   <div class="store-card cursor-pointer">
     <div class="card-image mb-3 relative overflow-hidden">
       <span class="overlay rounded-md flex items-center justify-center">
-        <span class="text-lg font-semibold leading-5 text-gray-800 text-center">
+        <span
+          class="text-lg font-semibold leading-5 p-3 text-gray-800 text-center"
+        >
           {{ data.description }}
         </span>
       </span>

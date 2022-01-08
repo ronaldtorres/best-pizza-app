@@ -1,5 +1,5 @@
 <template>
-  <div class="main flex">
+  <div class="main flex overflow-hidden h-screen">
     <div class="left-container">
       <router-link to="/" v-if="isLoggedIn">
         <img
@@ -16,7 +16,7 @@
       <router-view />
       <div
         v-if="isLoggedIn"
-        class="fixed lg:absolute bottom-0 w-full text-white"
+        class="fixed xl:absolute bottom-0 w-full text-white"
       >
         <Footer />
       </div>
@@ -58,7 +58,7 @@ export default {
 
   .left-container {
     background-image: url("./assets/bg.png");
-    @apply w-5/12 bg-cover bg-no-repeat hidden lg:block relative;
+    @apply w-5/12 2xl:w-4/12 bg-cover bg-no-repeat hidden lg:block relative;
   }
 }
 
