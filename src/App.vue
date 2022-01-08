@@ -3,13 +3,13 @@
     <div class="left-container">
       <router-link to="/" v-if="isLoggedIn">
         <img
-          src="@/assets/logo-white.png"
+          v-lazy="getImgUrl('logo-white.png')"
           class="absolute w-24 top-12 left-24"
           alt="Best Pizza"
         />
       </router-link>
       <div class="container flex justify-center h-screen items-center">
-        <img v-lazy="require('@/assets/pizza.png')" alt="background" />
+        <img v-lazy="getImgUrl('pizza.png')" alt="background" />
       </div>
     </div>
     <div class="flex-grow relative">
@@ -27,6 +27,7 @@
 <script>
 import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
+import { getImgUrl } from "@/utils/utils";
 import Footer from "@/components/Footer.vue";
 import auth from "@/services/authService";
 
@@ -43,7 +44,7 @@ export default {
       () => (isLoggedIn.value = !!auth.getCurrentSession())
     );
 
-    return { isLoggedIn };
+    return { isLoggedIn, getImgUrl };
   },
 };
 </script>
@@ -58,6 +59,7 @@ export default {
 
   .left-container {
     background-image: url("./assets/bg.png");
+    background-color: #262626;
     @apply w-5/12 2xl:w-4/12 bg-cover bg-no-repeat hidden lg:block relative;
   }
 }
