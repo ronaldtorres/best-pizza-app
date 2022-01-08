@@ -1,15 +1,15 @@
 <template>
-  <div class="card cursor-pointer">
+  <div class="store-card cursor-pointer">
     <div class="card-image mb-3 relative overflow-hidden">
+      <span class="overlay rounded-md flex items-center justify-center">
+        <span class="text-lg font-semibold leading-5 text-gray-800 text-center">
+          {{ data.description }}
+        </span>
+      </span>
       <img
         class="aspect-square w-full"
-        v-lazy="getImgUrl(`store-${data.id}`)"
+        v-lazy="getImgUrl(`stores/store-${data.id}.png`)"
         :alt="data.name"
-      />
-      <img
-        class="aspect-square w-full absolute object-cover inset-0"
-        v-lazy="getImgUrl(`store-${data.id}-alt`)"
-        :alt="data.name + 'food'"
       />
     </div>
     <div class="card-text">
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { getImgUrl } from "@/utils/utils";
 export default {
   props: {
     data: {
@@ -31,8 +32,6 @@ export default {
   },
 
   setup() {
-    const getImgUrl = (name) => require(`../assets/stores/${name}.png`) ?? "";
-
     return {
       getImgUrl,
     };
@@ -41,19 +40,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
-  .card-image img:nth-child(2) {
-    opacity: 0;
-    transform: translateY(100%);
-    width: 0px;
-    @apply transition-all duration-300;
+.store-card {
+  .card-image {
+    .overlay {
+      @apply inset-0 absolute bg-yellow-300 opacity-0 transition;
+    }
   }
 
   &:hover {
-    .card-image img:nth-child(2) {
-      transform: translateY(0%);
+    .card-image .overlay {
       opacity: 1;
-      width: auto;
     }
   }
 }

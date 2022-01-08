@@ -1,5 +1,5 @@
 <template>
-  <div class="main flex overflow-hidden">
+  <div class="main flex">
     <div class="left-container">
       <router-link to="/" v-if="isLoggedIn">
         <img
@@ -14,7 +14,10 @@
     </div>
     <div class="flex-grow relative">
       <router-view />
-      <div v-if="isLoggedIn" class="absolute bottom-0 w-full text-white">
+      <div
+        v-if="isLoggedIn"
+        class="fixed lg:absolute bottom-0 w-full text-white"
+      >
         <Footer />
       </div>
     </div>
