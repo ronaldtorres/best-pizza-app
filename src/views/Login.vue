@@ -4,7 +4,7 @@
       <img
         class="mx-auto mb-10 w-6/12"
         alt="Best Pizza Logo"
-        src="../assets/logo-black.png"
+        v-lazy="require('../assets/logo-black.png')"
       />
       <h1 class="text-5xl font-semibold mb-4">Bienvenido</h1>
       <p class="text-2xl text-gray-500 mb-10">A las mejores pizzas del país</p>

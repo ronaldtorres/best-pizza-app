@@ -6,7 +6,7 @@ export default {
   async login(email, password) {
     try {
       let res = await api.get("RH.json");
-      const users = res.data.response?.users;
+      const users = res.data?.response?.users || [];
 
       const user = users.find(
         (u) => u.email === email && u.password === password
@@ -21,11 +21,6 @@ export default {
     } catch (error) {
       console.error(error);
     }
-  },
-
-  logout() {
-    // Logout through api when needed...
-    this.removeSessionForUser();
   },
 
   getCurrentSession() {
